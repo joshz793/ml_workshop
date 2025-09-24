@@ -24,7 +24,7 @@ def load_data_from_file(filename) -> dict:
 def _load_data_from_string_dict(string_dict) -> dict:
 	result_dict = {}
 	for key in string_dict:
-		graph = nx.node_link_graph(string_dict[key], edges="edges")
+		graph = nx.node_link_graph(string_dict[key], link="edges")
 		result_dict[key] = graph
 	return result_dict
 
